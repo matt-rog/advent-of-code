@@ -8,7 +8,7 @@ abc_nums = %{"one" => "1", "two" => "2", "three" => "3",
 sum = input
   |> String.split("\n")
   |> Enum.map(fn line ->
-    # get indecies of abc_num locations, in map, then sort by first indeces and apply those
+    # get indecies of abc_num locations, in map, then sort by first indices and apply those
       abc_nums_i = Enum.map(Map.keys(abc_nums), fn abc_nums_k ->
         index = case String.split(line, abc_nums_k, parts: 2) do
           [left, _] -> String.length(left)
