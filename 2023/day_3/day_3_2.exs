@@ -7,7 +7,6 @@ sum = lines |> Enum.with_index
   |> Enum.map(fn line_m ->
 
     {line, l_i} = line_m
-    #nums = Regex.scan(~r/\b\d+\b/, line, return: :index)
     stars = Regex.scan(~r/\*/, line, return: :index)
 
     line_gear_ratios = stars |> Enum.map(fn star ->
